@@ -1,0 +1,37 @@
+/*
+Theme Name: Tootoon Tobacco Theme
+Author: WiseSource 
+Author URI: https://wisesource.net
+Description: 
+Version: 1.0
+Text Domain: tootoontobacco
+
+*/
+
+body {
+	width: 100%;
+	background: pink;
+}
+
+header {
+	min-height: 70px;
+	background-color: #FFFFFF;
+} 
+
+header div.navbar-header {
+	height: 70px;
+	position: relative;
+}
+
+button.navbar-toggle {
+	position: absolute;
+	top: 50%;
+	bottom: 50%;
+	right: 0px;
+	padding: 0px;
+	margin: -50% 15px -50% 0px;
+}
+
+button.navbar-toggle span.icon-bar {
+	background-color: #333333;
+}
