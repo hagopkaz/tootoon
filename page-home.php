@@ -93,11 +93,8 @@
     
     <h2 class="home-section-title section-title">Happy Clients</h2>
 
-    <div id="testimCarousel" class="carousel slide conatainer">
-                                    
-                                    <div class="container testim-container">
-
-                                        <ol class="carousel-indecators">
+    <div id="testimCarousel" class="carousel slide">
+                                     <ol class="carousel-indicators">
                                             <?php
                 
                                                 $testim_a = array (                
@@ -116,7 +113,7 @@
                                                     while($testim_q->have_posts()) { 
                                                         $testim_q->the_post(); ?>
 
-                                                <li data-target="#testimCarousel" data-slide-to="<?php echo $i; ?>" <?php ($i==0 ? 'class="active"' : ''); ?> ></li>
+                                                <li data-target="#testimCarousel" data-slide-to="<?php echo $i; ?>"  ></li>
 
                                                <?php $i++; } 
 
@@ -126,6 +123,9 @@
 
                                             ?>
                                         </ol>
+                                    <div class="container testim-container">
+
+                                       
                                         
                                         <div class="row carousel-inner">
                                             
