@@ -96,6 +96,36 @@
     <div id="testimCarousel" class="carousel slide conatainer">
                                     
                                     <div class="container testim-container">
+
+                                        <ol class="carousel-indecators">
+                                            <?php
+                
+                                                $testim_a = array (                
+                                                    'post_type' => 'testimonials',
+                                                    'order'     =>  'ASC',
+                                                    'posts_per_page'=>  '-1',
+                                                );            
+
+                                                $testim_q = new WP_Query($testim_a);
+
+
+                                            if ($testim_q->have_posts()) {
+
+                                                        $i=0;
+
+                                                    while($testim_q->have_posts()) { 
+                                                        $testim_q->the_post(); ?>
+
+                                                <li data-target="#testimCarousel" data-slide-to="<?php echo $i; ?>" <?php ($i==0 ? 'class="active"' : ''); ?> ></li>
+
+                                               <?php $i++; } 
+
+
+
+                                            }  wp_reset_postdata();  
+
+                                            ?>
+                                        </ol>
                                         
                                         <div class="row carousel-inner">
                                             

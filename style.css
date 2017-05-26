@@ -74,6 +74,23 @@ section.testimonials h2.section-title:after {
 }
 
 
+
+#testimCarousel .carousel-content {
+    text-align: center;
+}
+
+#testimCarousel .carousel-content p {
+    
+    line-height: 40px;
+    font-size: 30px;
+    margin: 0px;
+}
+
+#testimCarousel .carousel-content .testimonial-meta {
+    font-size: 24px;
+    color: #E84B37;
+}
+
 footer {
 	background-color: #333333;
 	color: #FFFFFF;
