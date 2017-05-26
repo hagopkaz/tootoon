@@ -9,10 +9,12 @@ Text Domain: tootoontobacco
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+@import 'fonts/font.css';
 
 body {
 	width: 100%;
-	font-family: 'Open Sans', sans-serif;
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'BrandonGrotesque', sans-serif;
 }
 
 header {
@@ -37,6 +39,40 @@ button.navbar-toggle {
 button.navbar-toggle span.icon-bar {
 	background-color: #333333;
 }
+
+section.testimonials {
+	padding: 40px 0px;
+	background: #d585ff; /* Old browsers */
+	background: -moz-linear-gradient(left, #d585ff 0%, #00ffee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #d585ff 0%,#00ffee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #d585ff 0%,#00ffee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d585ff', endColorstr='#00ffee',GradientType=1 ); /* IE6-9 */
+	text-align: center;
+}
+
+section.testimonials h2.section-title {
+	font-size: 20px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+}
+
+section.testimonials h2.section-title:after {
+	content: '';
+    width: 50%;
+    height: 5px;
+    background-color: #FFFFFF;
+    position: absolute;
+    bottom: -15px;
+    right: 50%;
+    margin-right: -25%;
+    margin-left: -25%;
+    left: 50%;
+}
+
 
 footer {
 	background-color: #333333;

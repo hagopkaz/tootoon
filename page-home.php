@@ -89,5 +89,73 @@
 </div>
     </div></div>
  <?php endwhile; endif; ?>
+<section class="testimonials">
+    
+    <h2 class="home-section-title section-title">Happy Clients</h2>
+
+    <div id="testimCarousel" class="carousel slide conatainer">
+                                    
+                                    <div class="container testim-container">
+                                        
+                                        <div class="row carousel-inner">
+                                            
+                                            <?php
+                
+                                                $testim_a = array (                
+                                                    'post_type' => 'testimonials',
+                                                    'order'     =>  'ASC',
+                                                    'posts_per_page'=>  '-1',
+                                                );            
+
+                                                $testim_q = new WP_Query($testim_a);
+
+
+                                            if ($testim_q->have_posts()) {
+
+
+
+                                                    while($testim_q->have_posts()) {
+                                                        $testim_q->the_post(); ?>
+                                                        <div class="item">
+                                                            <div class=" testimonial-holder col-xs-12">
+                                                                <div class="carousel-content">
+                                                               
+                                                                <?php if(get_post_meta($post->ID,'testimonial')) {
+                                                                            
+                                                                            echo "<p>".get_post_meta($post->ID,'testimonial')[0]."</p>";
+                                                                        };?>
+                                                                
+                                                                <div class="testimonial-meta">
+                                                                    <?php
+                                                                        if(get_post_meta($post->ID,'name')) {
+                                                                            
+                                                                            echo "-".get_post_meta($post->ID,'name')[0];
+                                                                        };
+                                                        
+                                                                        if(get_post_meta($post->ID,'title')) {
+                                                                            
+                                                                            echo ", ".get_post_meta($post->ID,'title')[0];
+                                                                        };
+
+                                                                    ?></div>
+                                                                </div>
+                                                                </div>
+                                                                
+
+                                            </div>                      
+
+                                                   <?php }
+
+
+
+                                            }  wp_reset_postdata();  
+
+                                            ?>
+                                        
+                                        </div>
+                                         
+                                    </div>
+                                    </div>  
+</section>
 
 <?php get_footer(); ?>
