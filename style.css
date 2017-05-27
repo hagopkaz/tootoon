@@ -36,6 +36,35 @@ header div.navbar-header {
 	position: relative;
 }
 
+header a.navbar-brand {
+	position: relative;
+	display: flex;
+	height: auto!important;
+}
+
+header a.navbar-brand img {
+	height: 50px;
+	float: left;
+}
+
+header a.navbar-brand span.logo-text {
+	font-size: 12px;
+    float: left;
+    line-height: 126%;
+    font-family: 'BrandonGrotesque', sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+    height: 50px;
+    text-align: center;
+    padding-top: 5px;
+    background: -webkit-linear-gradient(top, #333333, #d5d5d5);
+				  -webkit-background-clip: text;
+				  -webkit-text-fill-color: transparent;
+	 display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 button.navbar-toggle {
 	position: absolute;
 	top: 50%;
