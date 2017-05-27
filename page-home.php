@@ -74,9 +74,37 @@
     <div class="container">
 
         <div class="row">
-            
+            <div class="product-section-title">
             <h2 class="home-section-title section-title">OUR FLAVOURS</h2>
+</div>
+            <div class="col-xs-12 product-item">
 
+
+                
+                <div class="product-img">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/prod-.png" />
+                </div>
+
+                <div class="product-content">
+                <div class="product-description">
+                    <h3 class="product-title">
+                        Spanish Lime
+                    </h3>
+
+                    <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+
+
+                </div>
+
+                <div class="product-meta clearfix">
+                    <span class="product-sku">1-008 005 006</span>  <span class="product-price">$89.00</span>
+                </div>
+            </div>
+            </div>
+
+
+            <a class="button products-more grad-border">See More</a>
+            
         </div>
 
     </div>

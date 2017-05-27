@@ -13,6 +13,7 @@ Text Domain: tootoontobacco
 
 body {
 	width: 100%;
+	font-size: 14px;
 	/*font-family: 'Open Sans', sans-serif;*/
 }
 
@@ -64,7 +65,7 @@ h2.section-title.section-title-black:after {
 	background-color: #000000;
 }
 
-a.botton.grad-bg {
+a.button {
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -73,12 +74,97 @@ a.botton.grad-bg {
 	font-size: 14px;
 	font-weight: bold;
 	text-transform: uppercase;
+	display: inline-block;
+}
+
+a.grad-bg {
+
 	background: #d585ff; /* Old browsers */
 	background: -moz-linear-gradient(left, #d585ff 0%, #00ffee 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(left, #d585ff 0%,#00ffee 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, #d585ff 0%,#00ffee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d585ff', endColorstr='#00ffee',GradientType=1 ); /* IE6-9 */
-	display: inline-block;
+}
+
+a.grad-border {
+	color: #333333;
+	border-left: 2px solid #3ACFD5;
+  border-right: 2px solid #3a4ed5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-position: 0 0, 0 100% ;
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 20px;
+  -moz-background-size: 100% 20px;
+  background-size: 100% 2px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhNGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMSAxIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48bGluZWFyR3JhZGllbnQgaWQ9Imxlc3NoYXQtZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzYWNmZDUiIHN0b3Atb3BhY2l0eT0iMSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzNhNGVkNSIgc3RvcC1vcGFjaXR5PSIxIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2xlc3NoYXQtZ2VuZXJhdGVkKSIgLz48L3N2Zz4=);
+  background-image: -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%), -webkit-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+  background-image: -moz-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%), -moz-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+  background-image: -o-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%), -o-linear-gradient(left, #3acfd5 0%, #3a4ed5 100%);
+  background-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%), linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%);
+}
+
+section.home-products {
+	background-image: url("images/home-prod-bg.png");
+	background-repeat: repeat-x;
+	text-align: center;
+	padding: 45px 0px;
+}
+
+section.home-products div.product-item {
+	margin-bottom: 35px;
+}
+
+section.home-products div.product-img img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+section.home-products div.product-content {
+	padding: 0px 20px 20px;
+    box-shadow: 0px 25px 40px 0px rgba(0,0,0,0.1);
+
+}
+
+section.home-products div.product-description {
+	color: #5c6369;
+	font-size: 14px;
+	border-bottom: 1px solid #e1e1e1;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+}
+
+section.home-products div.product-description h3.product-title {
+	font-size: 24px;
+	font-weight: 900;
+	margin-bottom: 20px;
+	color: #000000;
+}
+
+section.home-products div.product-description p {
+	line-height: 24px;
+}
+
+section.home-products div.product-meta {
+	position: relative;
+	font-weight: 900;
+	font-family: 'BrandonGrotesque', sans-serif;
+}
+
+section.home-products div.product-meta span.product-sku {
+	float: left;
+	color: #000000;
+	font-size: 14px
+}
+
+section.home-products div.product-meta span.product-price {
+	float: right;
+	font-size: 16px;
+	background: -webkit-linear-gradient(left, #d585ff, #00ffee);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	
 }
 
 section.testimonials {
