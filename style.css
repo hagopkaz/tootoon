@@ -16,6 +16,15 @@ body {
 	/*font-family: 'Open Sans', sans-serif;*/
 }
 
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'BrandonGrotesque', sans-serif;
+	margin-top: 0px;
+}
+
+p {
+	margin-bottom: 20px;
+}
+
 header {
 	min-height: 70px;
 	background-color: #FFFFFF;
@@ -39,6 +48,39 @@ button.navbar-toggle span.icon-bar {
 	background-color: #333333;
 }
 
+section.home-about {
+	text-align: center;
+	padding: 35px 0px;
+}
+
+section.home-about h2.section-title.section-title-black {
+	width: 80%;
+}
+
+h2.section-title.section-title-black {
+	color: #000000;
+}
+h2.section-title.section-title-black:after {
+	background-color: #000000;
+}
+
+a.botton.grad-bg {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 20px 30px;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: #d585ff; /* Old browsers */
+	background: -moz-linear-gradient(left, #d585ff 0%, #00ffee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #d585ff 0%,#00ffee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #d585ff 0%,#00ffee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d585ff', endColorstr='#00ffee',GradientType=1 ); /* IE6-9 */
+	display: inline-block;
+}
+
 section.testimonials {
 	padding: 40px 0px;
 	background: #d585ff; /* Old browsers */
@@ -50,7 +92,7 @@ section.testimonials {
 	min-height: 380px;
 }
 
-section.testimonials h2.section-title {
+h2.section-title {
 	font-family: 'BrandonGrotesque', sans-serif;
 	font-size: 20px;
 	color: #FFFFFF;
@@ -59,10 +101,12 @@ section.testimonials h2.section-title {
 	text-align: center;
 	position: relative;
 	display: inline-block;
-	margin-bottom: 25px;
+	margin-top: 0px;
+	margin-bottom: 40px;
+	line-height: 30px;
 }
 
-section.testimonials h2.section-title:after {
+h2.section-title:after {
 	content: '';
     width: 50%;
     height: 5px;

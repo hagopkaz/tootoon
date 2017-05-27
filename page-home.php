@@ -54,41 +54,35 @@
     </div>
     
 </div> -->
-
+<section class="home-about">
 <?php  if(have_posts()) : while(have_posts()) : the_post(); ?>
 <div class="container">
     <div class="row">
-<div class="col-lg-12">
-    
-    <?php 
-        
-        if(get_post_meta($post->ID,'file_link')) { ?>
-    
-           
-            
-              <script type="text/javascript">  
-      
-        
-        function startDownload()  
-        {  
-             var url='<?php echo get_post_meta($post->ID,'file_link')[0]; ?>';    
-             window.open(url, 'Download');  
-        }  
-              
-            setTimeout('startDownload()', 1000);
-        </script>
-            
-       <?php } ?>
+
+<div class="col-xs-12">
+  
     
 
-    
-   
-    
-    <h1><?php the_title(); ?></h1>
-    <?php the_content(); ?>
+        <?php the_content(); ?>
 </div>
     </div></div>
  <?php endwhile; endif; ?>
+</section>
+
+<section class="home-products">
+
+    <div class="container">
+
+        <div class="row">
+            
+            <h2 class="home-section-title section-title">OUR FLAVOURS</h2>
+
+        </div>
+
+    </div>
+
+</section>
+
 <section class="testimonials">
     
     <h2 class="home-section-title section-title">Happy Clients</h2>
