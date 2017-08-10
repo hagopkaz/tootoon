@@ -214,20 +214,39 @@ section.slider {
 
 }
 
-.floater {
-	float: left;
-    height: 50%;
-    width: 100%;
-    margin-bottom: -50px;
-}
-
-
 section.home-about {
 	text-align: center;
 	padding: 35px 0px;
-	
+
+	@media screen and (min-width:992px) {
+		text-align: left;
+
+		h2.section-title.section-title-black {
+			    text-align: left;
+			    font-size: 35px;
+			    line-height: 45px; 
+
+			    &:after {
+			    	left: 0px;
+			    margin: 0;
+			    width: 80px;
+			    }
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 25px;
+		}
+
+		a.button { 
+			padding: 15px 30px;
+		}
+
+	}
+	 
 	h2.section-title.section-title-black {
 		width: 80%;
+
 	}
 
 }
@@ -253,7 +272,8 @@ a.button {
 	font-weight: bold;
 	text-transform: uppercase;
 	display: inline-block;
-}
+	text-decoration: none;
+} 
 
 a.grad-bg {
 

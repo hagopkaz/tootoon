@@ -152,15 +152,25 @@ section.slider div.item {
       width: 40px;
       border-top: 3px solid #FFF; }
 
-.floater {
-  float: left;
-  height: 50%;
-  width: 100%;
-  margin-bottom: -50px; }
-
 section.home-about {
   text-align: center;
   padding: 35px 0px; }
+  @media screen and (min-width: 992px) {
+    section.home-about {
+      text-align: left; }
+      section.home-about h2.section-title.section-title-black {
+        text-align: left;
+        font-size: 35px;
+        line-height: 45px; }
+        section.home-about h2.section-title.section-title-black:after {
+          left: 0px;
+          margin: 0;
+          width: 80px; }
+      section.home-about p {
+        font-size: 14px;
+        line-height: 25px; }
+      section.home-about a.button {
+        padding: 15px 30px; } }
   section.home-about h2.section-title.section-title-black {
     width: 80%; }
 
@@ -182,7 +192,8 @@ a.button {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  display: inline-block; }
+  display: inline-block;
+  text-decoration: none; }
 
 a.grad-bg {
   background: #d585ff;

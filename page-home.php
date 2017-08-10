@@ -122,46 +122,70 @@
 </section>
 
 <section class="home-products">
-
+    
     <div class="container">
-
-        <div class="row">
-            <div class="product-section-title">
-            <h2 class="home-section-title section-title">OUR FLAVOURS</h2>
-</div>
-            <div class="col-xs-12 product-item">
-
-
-                
-                <div class="product-img">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/prod-.png" />
-                </div>
-
-                <div class="product-content">
-                <div class="product-description">
-                    <h3 class="product-title">
-                        Spanish Lime
-                    </h3>
-
-                    <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
-
-
-                </div>
-
-                <div class="product-meta clearfix">
-                    <span class="product-sku">1-008 005 006</span>  <span class="product-price">$89.00</span>
-                </div>
-            </div>
-            </div>
-
-
-            <a class="button products-more grad-border">See More</a>
             
-        </div>
+            <div class="row">
+                 <div class="product-section-title">
+                            <h2 class="home-section-title section-title">OUR FLAVOURS</h2>
+                </div>
+
+
+                <?php 
+                    $home_prod_a = array (
+                                    'posts_per_page' => 2,
+                                    'post_type'      => 'product'
+
+                                    );
+                    $home_prod_q = new WP_Query($home_prod_a);
+
+                    if ($home_prod_q->have_posts()) : $pc=0; while ($home_prod_q->have_posts()): $pc++; $home_prod_q->the_post();
+
+                    $visclass = "product-item col-xs-12 col-sm-12 col-md-6";
+
+                    if ($pc==2) { $visclass = $visclass." hidden-sm hidden-xs"; } ?>
+
+                        <div class="<?php echo $visclass; ?>">
+                            <div class="product-img">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/prod-.png" />
+                                </div>
+
+                                <div class="product-content">
+                                <div class="product-description">
+                                    <h3 class="product-title">
+                                        Spanish Lime
+                                    </h3>
+
+                                    <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+
+
+                                </div>
+
+                                <div class="product-meta clearfix">
+                                    <span class="product-sku">1-008 005 006</span>  <span class="product-price">$89.00</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    <?php endwhile;
+
+                    wp_reset_postdata();
+
+                    else: 
+
+                        endif;
+
+                ?>
+                
+                    <a class="button products-more grad-border" href="<?php bloginfo('url'); ?>/shop">See More</a>
+            </div>
+
 
     </div>
 
 </section>
+
 
 <section class="testimonials">
     
