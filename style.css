@@ -366,6 +366,9 @@ footer {
   background-color: #333333;
   color: #FFFFFF;
   padding: 20px 0px 30px; }
+  @media screen and (min-width: 992px) {
+    footer {
+      padding: 40px 0px; } }
   footer nav ul {
     margin: 0px;
     padding: 0px;

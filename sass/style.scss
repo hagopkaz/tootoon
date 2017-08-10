@@ -500,6 +500,10 @@ footer {
 	background-color: #333333;
 	color: #FFFFFF;
 	padding: 20px 0px 30px;
+	
+		@media screen and (min-width:992px) {
+			padding: 40px 0px;
+		}
 
 	nav {
 		ul {
