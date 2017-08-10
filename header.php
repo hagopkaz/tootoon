@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css"/>
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
@@ -85,7 +86,7 @@
 							'theme_location' 	=> 'main-menu',
 							'container'			=> 'nav',
 							'container_class' 	=> 'top-menu collapse navbar-collapse',
-							'menu_class' 		=> 'nav navbar-nav navbar-right clearfix ',
+							'menu_class' 		=> 'nav navbar-nav navbar-left clearfix ',
 						
 					);
 					

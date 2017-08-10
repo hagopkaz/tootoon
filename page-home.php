@@ -1,13 +1,45 @@
 <?php get_header(); ?>
-<!-- <div class="container-fluid home-slider-container" >
+<section class="slider" >
 
-    <div class="row slider-row" id="homeSlider"> 
-        
+    <div id="bannerCarousel" class="carousel slide" data-ride="carousel"> 
+        <ol class="carousel-indicators hidden-xs hidden-sm">
+                                            <?php
+                
+                                                $slider_a = array (                
+                                                    'post_type' => 'testimonials',
+                                                    'order'     =>  'ASC',
+                                                    'posts_per_page'=>  '-1',
+                                                );            
+
+                                                $slider_q = new WP_Query($slider_a);
+
+
+                                            if ($slider_q->have_posts()) {
+
+                                                        $j=0;
+
+                                                    while($slider_q->have_posts()) { 
+                                                        $slider_q->the_post(); ?>
+
+                                                <li data-target="#testimCarousel" data-slide-to="<?php echo $j; ?>"  ></li>
+
+                                               <?php $j++; } 
+
+
+
+                                            }  wp_reset_postdata();  
+
+                                            ?>
+                                        </ol>   
+
+                                        <div class="slider-container">
+                                            <div class="carousel-inner">
         <?php 
             
             $slider_a = array (
                 'post_type' =>  'slider',
                 'order'     =>  'ASC',
+                'posts_per_page'=>  '-1',
                 
             );
         
@@ -16,26 +48,44 @@
             if($slider_q->have_posts()) { 
                 while($slider_q->have_posts()) { $slider_q->the_post(); ?>
                     
-                    
+                        
+                        <?php if (class_exists('MultiPostThumbnails')) : 
+                                $imageid = MultiPostThumbnails::get_post_thumbnail_id('slider', 'mobile-image', $post->ID);
+                                $imageurl = wp_get_attachment_image_src($imageid,'full');
+                                    
+                                
+                               $mobileUrl = $imageurl[0];
+
+                                endif; ?>
+
                         <?php if ( has_post_thumbnail() ) {
-                                $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
-                            <div class="col-lg-12 slider-item" style="background-image:url('<?php echo $url; ?>')">
+                                $fullUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); ?>
+
+                            <div class="col-xs-12 item" >
+
+                                <div class="hidden-xs hidden-sm full-bg slider-bg" style="background-image:url('<?php echo $fullUrl; ?>')">
                                 
                                         <?php the_post_thumbnail(); ?>
+                                        <div class="floater"></div>
+                                            <div class="carousel-content">
                                 
+                                                  <?php the_content(); ?>
+                                              </div>
+                                       
+                                 </div>
+
+                                 <div class="hidden-md hidden-lg mobile-bg slider-bg" style="background-image:url('<?php echo $mobileUrl; ?>')">
                                 
+                                        <?php the_post_thumbnail(); ?>
+                                        <div class="floater"></div>
+                                        <div class="carousel-content">
                                 
-                                    <div class="slider-content container">
-                                        
-                                        <div class="row">
-                                            
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slide-text">
-                                              <?php the_content(); ?>
-                                            </div>
-                                            
-                                        </div>
-                                        
-                                    </div>
+                                                  <?php the_content(); ?>
+                                              </div>
+
+                                       
+                                 </div>
+                                      
                                 
                                   </div>
                         <?php    };   ?>
@@ -50,10 +100,10 @@
             /* Restore original Post Data */
             wp_reset_postdata();    
         ?>
-    
+        </div></div>
     </div>
     
-</div> -->
+</section>
 <section class="home-about">
 <?php  if(have_posts()) : while(have_posts()) : the_post(); ?>
 <div class="container">

@@ -5,27 +5,7 @@
     <div class="row">
 <div class="col-lg-12">
     
-    <?php 
-        
-        if(get_post_meta($post->ID,'file_link')) { ?>
     
-           
-            
-              <script type="text/javascript">  
-      
-        
-        function startDownload()  
-        {  
-             var url='<?php echo get_post_meta($post->ID,'file_link')[0]; ?>';    
-             window.open(url, 'Download');  
-        }  
-              
-            setTimeout('startDownload()', 1000);
-        </script>
-            
-       <?php } ?>
-    
-
     
    
     
