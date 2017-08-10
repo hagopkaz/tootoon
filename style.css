@@ -33,7 +33,10 @@ header {
   header a.navbar-brand {
     position: relative;
     display: flex;
-    height: auto !important; }
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
     @media screen and (min-width: 992px) {
       header a.navbar-brand {
         display: block;
@@ -52,15 +55,11 @@ header {
       font-family: "BrandonGrotesque", sans-serif;
       font-weight: bold;
       vertical-align: middle;
-      height: 50px;
       text-align: center;
-      padding-top: 5px;
       background: -webkit-linear-gradient(top, #333333, #d5d5d5);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      letter-spacing: 8px; }
       @media screen and (min-width: 992px) {
         header a.navbar-brand span.logo-text {
           float: none;
@@ -71,7 +70,8 @@ header {
           color: #3f3f3f;
           letter-spacing: 5px;
           line-height: 100%;
-          height: auto; } }
+          height: auto;
+          margin-top: 10px; } }
   header nav.top-menu.navbar-collapse {
     width: 100%;
     font-size: 14px;
@@ -88,10 +88,17 @@ header {
         justify-content: center;
         min-height: 100px;
         width: auto; } }
+    header nav.top-menu.navbar-collapse ul.nav li {
+      padding: 0px 15px; }
     header nav.top-menu.navbar-collapse ul.nav li.current-menu a, header nav.top-menu.navbar-collapse ul.nav li.active a, header nav.top-menu.navbar-collapse ul.nav li a:hover, header nav.top-menu.navbar-collapse ul.nav li a:focus {
-      color: #333333; }
+      color: #333333;
+      border-bottom: 2px solid #333; }
     header nav.top-menu.navbar-collapse ul.nav a {
-      color: #333333; }
+      color: #333333;
+      background: none;
+      line-height: 27px;
+      padding: 0px;
+      border-bottom: 2px solid transparent; }
 
 button.navbar-toggle {
   position: absolute;
@@ -249,6 +256,9 @@ section.home-products {
       font-weight: 900;
       margin-bottom: 20px;
       color: #000000; }
+      section.home-products div.product-description h3.product-title a {
+        color: #000;
+        text-decoration: none !important; }
     section.home-products div.product-description p {
       line-height: 24px; }
   section.home-products div.product-meta {
@@ -280,6 +290,10 @@ section.testimonials {
   /* IE6-9 */
   text-align: center;
   min-height: 380px; }
+  @media screen and (min-width: 992px) {
+    section.testimonials {
+      height: auto;
+      padding: 110px; } }
 
 h2.section-title {
   font-family: "BrandonGrotesque", sans-serif;
@@ -312,7 +326,25 @@ h2.section-title:after {
 #testimCarousel .carousel-content {
   text-align: center;
   font-size: 15px;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  position: relative; }
+  @media screen and (min-width: 992px) {
+    #testimCarousel .carousel-content {
+      width: 776px;
+      margin: 0px auto; }
+      #testimCarousel .carousel-content:before {
+        content: "\f10d";
+        font-size: 15px;
+        font-family: FontAwesome;
+        position: absolute;
+        left: -20px; }
+      #testimCarousel .carousel-content:after {
+        content: "\f10e";
+        font-size: 15px;
+        font-family: FontAwesome;
+        position: absolute;
+        right: 0px;
+        bottom: 0px; } }
   #testimCarousel .carousel-content p {
     font-size: 15px;
     margin: 0px;
@@ -322,6 +354,13 @@ h2.section-title:after {
     color: #FFFFFF; }
 #testimCarousel .carousel-inner {
   margin: 0px; }
+  #testimCarousel .carousel-inner a.carousel-control {
+    background: none;
+    color: #FFFFFF;
+    opacity: 1;
+    font-size: 50px;
+    text-shadow: none;
+    z-index: 1000; }
 
 footer {
   background-color: #333333;
@@ -336,7 +375,13 @@ footer {
     font-weight: bold; }
     footer nav ul li {
       margin-bottom: 30px; }
+      @media screen and (min-width: 992px) {
+        footer nav ul li {
+          display: inline-block;
+          margin: 0px 20px 30px; } }
       footer nav ul li a {
+        color: #FFFFFF; }
+      footer nav ul li a:hover, footer nav ul li a:focus {
         color: #FFFFFF; }
   footer .copyright {
     font-size: 13px;
@@ -346,6 +391,9 @@ footer {
     line-height: 200%; }
     footer .copyright img {
       margin: 35px 15px 0px; }
+      @media screen and (min-width: 992px) {
+        footer .copyright img {
+          margin: 0px 8px; } }
     footer .copyright .clear {
       clear: both; }
 

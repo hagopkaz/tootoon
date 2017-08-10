@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css"/>
 
     <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+    <!-- <script src="<?php bloginfo('template_directory'); ?>/js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script> -->
     <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
@@ -63,7 +63,7 @@
                         <a href="<?php bloginfo('url'); ?>" class="navbar-brand">
                             <img src="<?php bloginfo('template_url'); ?>/images/logo.png" />
                             <span class="logo-text">
-								TOOTOON<br /><span class="hidden-lg hidden-md">TOBACCO</span>
+								<span>TOOTOON</span><br /><span class="hidden-lg hidden-md">TOBACCO</span>
                             </span>
 
                          </a>

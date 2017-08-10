@@ -9,17 +9,17 @@ jQuery(document).ready(function($){
 		$('#bannerCarousel').carousel ( 'cycle');
 		$('#testimCarousel').carousel ( 'cycle');
 
-		$("#bannerCarousel").swiperight(function() {
-     	 $(this).carousel('prev');
-	    });
-	   $("#bannerCarousel").swipeleft(function() {
-	      $(this).carousel('next');
-	   });
-$("#testimCarousel").swiperight(function() {
-     	 $(this).carousel('prev');
-	    });
-	   $("#testimCarousel").swipeleft(function() {
-	      $(this).carousel('next');
-	   });
+// 		$("#bannerCarousel").swiperight(function() {
+//      	 $(this).carousel('prev');
+// 	    });
+// 	   $("#bannerCarousel").swipeleft(function() {
+// 	      $(this).carousel('next');
+// 	   });
+// $("#testimCarousel").swiperight(function() {
+//      	 $(this).carousel('prev');
+// 	    });
+// 	   $("#testimCarousel").swipeleft(function() {
+// 	      $(this).carousel('next');
+// 	   });
 });
 

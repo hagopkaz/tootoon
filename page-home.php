@@ -147,22 +147,25 @@
 
                         <div class="<?php echo $visclass; ?>">
                             <div class="product-img">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/prod-.png" />
-                                </div>
+                                <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $loop->post->ID ), 'single-post-thumbnail' ); ?>
+                                <img src="<?php  echo $image[0]; ?>" />
+                            </div>
 
                                 <div class="product-content">
                                 <div class="product-description">
                                     <h3 class="product-title">
-                                        Spanish Lime
+                                        <a href="<?php echo get_permalink(); ?>">
+                                            <?php the_title();?>
+                                        </a>
                                     </h3>
-
-                                    <p>printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer </p>
+                                    <div><?php the_excerpt(); ?></div>
 
 
                                 </div>
 
                                 <div class="product-meta clearfix">
-                                    <span class="product-sku">1-008 005 006</span>  <span class="product-price">$89.00</span>
+                                    <?php $product = new WC_Product(get_the_ID()); ?>
+                                    <span class="product-sku"><?php echo $product->get_sku(); ?></span>  <span class="product-price"><?php echo $product->get_price_html(); ?></span>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +195,7 @@
     <h2 class="home-section-title section-title">Happy Clients</h2>
 
     <div id="testimCarousel" class="carousel slide">
-                                     <ol class="carousel-indicators">
+                                     <ol class="carousel-indicators hidden-md hidden-lg">
                                             <?php
                 
                                                 $testim_a = array (                
@@ -226,7 +229,14 @@
                                        
                                         
                                         <div class="row carousel-inner">
-                                            
+                                            <a class="left carousel-control hidden-sm hidden-xs" href="#testimCarousel" role="button" data-slide="prev">
+                                                <span class="fa fa-angle-left" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                              </a>
+                                          <a class="right carousel-control hidden-sm hidden-xs" href="#testimCarousel" role="button" data-slide="next">
+                                                <span class="fa fa-angle-right" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                              </a>
                                             <?php
                 
                                                 $testim_a = array (                
