@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/reset.css"/>
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
-    <!-- <script src="<?php bloginfo('template_directory'); ?>/js/jquery.mobile/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+
     <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
        
