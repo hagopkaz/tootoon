@@ -31,13 +31,19 @@ p {
 }
 
 header {
-	min-height: 70px;
+	min-height: 80px;
 	background-color: #FFFFFF;
+
+		@media screen and (min-width:992px) {
+				min-height: 100px;
+			}
 
 
 	div.navbar-header {
-		height: 70px;
+		min-height: 70px;
 		position: relative;
+
+
 	}
 
 	a.navbar-brand {
@@ -45,9 +51,19 @@ header {
 		display: flex;
 		height: auto!important;
 
+		@media screen and (min-width:992px) {
+				display: block;
+				text-align: center;
+			}
+
 		img {
 			height: 50px;
 			float: left;
+
+			@media screen and (min-width:992px) {
+				float: none;
+				display: inline-block;
+			}
 		}
 
 		span.logo-text {
@@ -63,13 +79,25 @@ header {
 		    background: -webkit-linear-gradient(top, #333333, #d5d5d5);
 						  -webkit-background-clip: text;
 						  -webkit-text-fill-color: transparent;
-			 display: flex;
+			display: flex;
 			justify-content: center;
 			align-items: center;
+
+			@media screen and (min-width:992px) {
+				float: none;
+				display: block;
+				background:-webkit-linear-gradient(top, #3f3f3f, #3f3f3f);
+						  -webkit-background-clip: text;
+						  -webkit-text-fill-color: transparent;
+				color: #3f3f3f;
+				letter-spacing: 5px;
+				line-height: 100%;
+				height: auto;
+			}
 		}
 	}
 
-	nav {
+	nav.top-menu.navbar-collapse {
 		width: 100%;
 		font-size: 14px;
 		text-transform: uppercase;
@@ -80,10 +108,22 @@ header {
 
 		@media screen and (min-width:992px) {
 			position: relative;
+			    display: flex!important;
+			    flex-direction: column;
+			    justify-content: center;
+			    min-height: 100px;
+			    width: auto;
 		}
 
-		a {
-			color: #333333;
+		ul.nav {
+
+			li.current-menu a, li.active a, li a:hover, li a:focus {
+				color: #333333;
+			}
+
+			a {
+				color: #333333;
+			}
 		}
 
 	}
@@ -103,9 +143,30 @@ button.navbar-toggle {
 }
 
 section.slider {
+
+	ol.carousel-indicators {
+		    left: 5%;
+		    top: 50%;
+		    position: absolute;
+		    transform: translate(-10%, -50%);
+		    margin: 0px;
+		    width: 20px;
+		    bottom: auto;
+		    height: auto;
+		
+		li {
+			margin: 3px auto;
+		}
+
+	}
+
 	div.item {
 	height: 485px;
 	padding: 0px;
+
+		@media screen and (min-width:992px) {
+			height: 570px;
+		}
 
 		img {
 			display: none;
@@ -116,6 +177,10 @@ section.slider {
 			height: 100%;
 			background-size: 100% auto;
 			position: relative;
+			background-repeat: no-repeat;
+				background-size: cover;
+
+
 		}
 		
 		div.carousel-content {
@@ -125,7 +190,14 @@ section.slider {
 			clear: both;
 		   font-family: $headingfont;
 		   letter-spacing: 4px;
-
+		   position: absolute;
+		   top: 50%;
+		   left: 50%;
+		   transform: translate(-50%, -50%);
+		   width: 100%;
+			@media screen and (min-width:992px) {
+				font-size: 40px;
+			}
 		   p {
 		   		margin: 0px;
 		   }

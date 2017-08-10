@@ -63,7 +63,7 @@
                         <a href="<?php bloginfo('url'); ?>" class="navbar-brand">
                             <img src="<?php bloginfo('template_url'); ?>/images/logo.png" />
                             <span class="logo-text">
-								TOOTOON<br />TOBACCO
+								TOOTOON<br /><span class="hidden-lg hidden-md">TOBACCO</span>
                             </span>
 
                          </a>

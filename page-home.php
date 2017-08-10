@@ -21,7 +21,7 @@
                                                     while($slider_q->have_posts()) { 
                                                         $slider_q->the_post(); ?>
 
-                                                <li data-target="#testimCarousel" data-slide-to="<?php echo $j; ?>"  ></li>
+                                                <li data-target="#bannerCarousel" data-slide-to="<?php echo $j; ?>"  ></li>
 
                                                <?php $j++; } 
 
@@ -66,8 +66,9 @@
                                 <div class="hidden-xs hidden-sm full-bg slider-bg" style="background-image:url('<?php echo $fullUrl; ?>')">
                                 
                                         <?php the_post_thumbnail(); ?>
-                                        <div class="floater"></div>
+                                        
                                             <div class="carousel-content">
+
                                 
                                                   <?php the_content(); ?>
                                               </div>
@@ -76,8 +77,7 @@
 
                                  <div class="hidden-md hidden-lg mobile-bg slider-bg" style="background-image:url('<?php echo $mobileUrl; ?>')">
                                 
-                                        <?php the_post_thumbnail(); ?>
-                                        <div class="floater"></div>
+                                     
                                         <div class="carousel-content">
                                 
                                                   <?php the_content(); ?>
@@ -109,12 +109,14 @@
 <div class="container">
     <div class="row">
 
-<div class="col-xs-12">
+<div class="col-xs-12 col-sm-12 col-md-6">
   
     
 
         <?php the_content(); ?>
 </div>
+
+<div class="hidden-xs hidden-sm col-md-6"> <?php the_post_thumbnail(); ?></div>
     </div></div>
  <?php endwhile; endif; ?>
 </section>
